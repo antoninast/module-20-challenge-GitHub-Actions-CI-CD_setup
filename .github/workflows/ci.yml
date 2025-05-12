@@ -20,5 +20,5 @@ jobs:
           url: http://localhost:3001
           timeout: 60
 
-      - name: Run Cypress tests
-        run: npm run test  # Or your specific Cypress command
+      - name: Run Cypress Component tests
+        run: npm run test-component  # Or your specific Cypress command

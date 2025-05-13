@@ -1,0 +1,15 @@
+name: Deploy to Render on Merge to Main
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger Render Deploy Hook
+        env:
+          RENDER_DEPLOY_HOOK_URL: https://api.render.com/deploy/srv-d0gigaa4d50c73fspij0?key=CPdJylXFQzQ
+        run: |
+          curl -X POST $RENDER_DEPLOY_HOOK_URL

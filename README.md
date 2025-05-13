@@ -11,9 +11,18 @@ This project demonstrates how to set up a CI/CD pipeline for a full-stack applic
 There are two separate YAML files that define the pipelines: one for when a pull request is opened to the develop branch, and another for when code is merged into the main branch.
 
 - `run-tests.yml` – Runs Cypress component tests on PRs to `develop`
+GitHub Actions:
 ![alt text](image-2.png)
+
+
+Running tests on PR to merge to `develop`:
+![alt text](image-1.png)
 - `deploy-to-render.yml` – Deploys to Render when code is pushed to `main`
+GitHub Actions:
 ![alt text](image.png)
+
+Triggered deploy on Render after merge to `main`:
+![alt text](image-3.png)
 
 ## Application Overview
 When the application loads, you will see a **"Start Quiz"** button. Clicking it will begin a quiz containing multiple-choice questions related to Python. Each question has four answer options, but only one is correct. At the end of the quiz, your score will be displayed, showing how many answers you got right.
